@@ -1,0 +1,15 @@
+default: &defaults
+
+development:
+  ELASTICSEARCH_URL: "http://localhost:9200/"
+test:
+ <<: *defaults
+
+staging:
+   <<: *defaults
+   ELASTICSEARCH_URL: "http://localhost:9200/"
+
+
+production:
+  <<: *defaults
+  ELASTICSEARCH_URL: "http://localhost:9200/"
