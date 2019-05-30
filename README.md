@@ -7,11 +7,14 @@ It is assumed that you already have Ruby, Rails, MySQL, Redis and ElasticSearch 
 
 * Ruby version
 > ruby 2.4.1
+>
 > rails 5.1.2
 
 * To run the project
 > clone the repo
+> 
 > cd /repo
+> 
 > run bundle install
 
 * Database creation
@@ -22,5 +25,7 @@ It is assumed that you already have Ruby, Rails, MySQL, Redis and ElasticSearch 
 
 * Services (job queues, cache servers, search engines, etc.)
 > Job Queue: Sidekiq
+>
 > Cache Server: Redis
+>
 > Search Engine: Elasticsearch
