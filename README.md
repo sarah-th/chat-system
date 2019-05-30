@@ -1,24 +1,29 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Chat System
+Chat System Application
 
-Things you may want to cover:
+# Getting Started
+It is assumed that you already have Ruby, Rails, MySQL, Redis and ElasticSearch installed. Kindly check their documentation for installation steps.
+
 
 * Ruby version
+ruby 2.4.1
+rails 5.1.2
 
-* System dependencies
-
-* Configuration
+* Setup
+To run the project
+1. clone the repo
+2. cd /repo
+3. run bundle install
 
 * Database creation
+rake db:setup
 
 * Database initialization
-
-* How to run the test suite
+rake db:migrate
 
 * Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Job Queue: Sidekiq
+Cache Server: Redis
+Search Engine: Elasticsearch
