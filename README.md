@@ -1,8 +1,8 @@
 # Chat System
 Chat System Application
 
-# Getting Started
-It is assumed that you already have Ruby, Rails, MySQL, Redis and ElasticSearch installed. Kindly check their documentation for installation steps.
+# Pre-Requirements
+First install docker, docker compose for your machine and start it. How this is done is very well documented all over the internet. 
 
 
 * Ruby version
@@ -10,18 +10,18 @@ It is assumed that you already have Ruby, Rails, MySQL, Redis and ElasticSearch 
 >
 > rails 5.1.2
 
-* To run the project
+# Build the project
 > clone the repo
 > 
 > cd /repo
 > 
-> run bundle install
+> sudo docker-compose up -d
 
-* Database creation
-> rake db:setup
+# Database creation
+> sudo docker-compose run app rake db:create
 
-* Database initialization
-> rake db:migrate
+<!-- * Database initialization
+> sudo docker-compose run app rake db:migrate -->
 
 * Services (job queues, cache servers, search engines, etc.)
 > Job Queue: Sidekiq

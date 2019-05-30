@@ -31,5 +31,10 @@ module ChatSystem
     config.api_only = true
     config.cache_store = :redis_store, "redis://localhost:6379/0/cache", { expires_in: 1.hour }
     config.active_job.queue_adapter = :sidekiq
+    
+    logger           = ActiveSupport::Logger.new(STDOUT)
+    logger.formatter = config.log_formatter
+    config.log_tags  = [:subdomain, :uuid]
+    config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
 end
